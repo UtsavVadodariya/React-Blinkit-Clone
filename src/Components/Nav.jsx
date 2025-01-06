@@ -10,7 +10,7 @@ import { IoBagHandleSharp } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa";
 
 export default function Nav() {
-  const [isCartOpen, setIsCartOpen] = useState(false); // State to toggle the cart sidebar
+  const [isCartOpen, setIsCartOpen] = useState(false); 
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.todosKey);
 
@@ -79,7 +79,6 @@ export default function Nav() {
 
       </header>
 
-      {/* Cart Sidebar */}
       {isCartOpen && (
         <div className="cart-slide fixed top-0 right-0 h-full w-[364px] bg-[#fbfbfd] shadow-lg overflow-y-auto z-50" >
           <div className="border-b h-[58.15px] w-[100%] bg-white p-[18px]">
@@ -168,9 +167,6 @@ export default function Nav() {
 
       )}
 
-
-
-      {/* Overlay */}
       {isCartOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40"
